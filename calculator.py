@@ -1,3 +1,8 @@
+'''
+   Program: Magic Calculator
+   Autor: Nick G.
+   Copyright: 2016
+'''
 import re
 
 print("Our Magical Calculator")
@@ -11,11 +16,14 @@ def perform_match():
     global run
     global previous
     equation = ""
+
+    # If there has been a previous calculation, ude that result as a promt
     if equation == 0:
         equation = input("Enter equation: ")
     else:
         equation = input(str(previous))
 
+    # If user quits -->
     if equation == "quit":
         print("Goodbye Human!")
         run = False
